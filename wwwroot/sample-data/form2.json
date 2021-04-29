@@ -1,0 +1,305 @@
+{
+  "type": "regularLayout",
+  "id": "root",
+  "showBorder": false,
+  "layoutType": "horizontal",
+  "controls": [
+    {
+      "type": "regularLayout",
+      "id": "mainGroup",
+      "parentId": "root",
+      "showBorder": false,
+      "controls": [
+        {
+          "type": "regularLayout",
+          "id": "contactGroup",
+          "parentId": "mainGroup",
+          "showBorder": true,
+          "caption": "@Contacts.SectionTitle",
+          "printable": true,
+          "controls": [
+            {
+              "type": "textBox",
+              "id": "primaryContact",
+              "parentId": "contactGroup",
+              "caption": "@Contacts.PrimaryContact",
+              "validate": true,
+              "printable": true,
+              "errorText": "Please enter a value"
+            },
+            {
+              "type": "textBox",
+              "id": "secondaryContact",
+              "parentId": "contactGroup",
+              "caption": "@Contacts.SecondaryContact",
+              "validate": true,
+              "printable": true,
+              "errorText": "Please enter a value"
+            }
+          ],
+          "position": {
+            "type": "relativePosition",
+            "relativeToId": "leftColumn",
+            "location": "right"
+          }
+        },
+        {
+          "type": "regularLayout",
+          "id": "purposeGroup",
+          "parentId": "mainGroup",
+          "showBorder": true,
+          "caption": "What is the purpose of the requested analysis?",
+          "printable": true,
+          "controls": [
+            {
+              "type": "checkBoxDropdown",
+              "id": "purposeOfAnalysis",
+              "parentId": "purposeGroup",
+              "caption": "Purpose of analysis",
+              "emptyText": "Please select ...",
+              "validate": true,
+              "printable": true,
+              "errorText": "Please select a value",
+              "items": [
+                "Identification",
+                "Comparison",
+                "Quantification",
+                "Other (please explain below)"
+              ]
+            },
+            {
+              "type": "textBox",
+              "id": "otherPurposeOfAnalysis",
+              "parentId": "purposeGroup",
+              "caption": "Other purpose",
+              "printable": true,
+              "watermark": "If \"other purpose\", please explain"
+            },
+            {
+              "type": "checkBox",
+              "id": "isMoreSampleAvailable",
+              "parentId": "purposeGroup",
+              "caption": "Is more sample available if needed?",
+              "checkState": "indeterminate",
+              "validate": true,
+              "printable": true,
+              "errorText": "Please select a value"
+            }
+          ],
+          "position": {
+            "type": "tablePosition",
+            "rowIndex": 1,
+            "columnIndex": 0
+          }
+        },
+        {
+          "type": "regularLayout",
+          "id": "solubilityGroup",
+          "parentId": "mainGroup",
+          "showBorder": true,
+          "caption": "Please list solubility information.",
+          "printable": true,
+          "controls": [
+            {
+              "type": "multiLineTextBox",
+              "id": "solubilityInformation",
+              "parentId": "solubilityGroup",
+              "validate": true,
+              "printable": true,
+              "errorText": "Please enter a value"
+            }
+          ],
+          "position": {
+            "type": "tablePosition",
+            "rowIndex": 2,
+            "columnIndex": 0
+          }
+        },
+        {
+          "type": "regularLayout",
+          "id": "priorityGroup",
+          "parentId": "mainGroup",
+          "showBorder": true,
+          "caption": "What is the priority?",
+          "printable": true,
+          "controls": [
+            {
+              "type": "radioBoxGroup",
+              "id": "priority",
+              "parentId": "priorityGroup",
+              "selectedIndex": -1,
+              "itemLayout": "flow",
+              "validate": true,
+              "errorText": "Please select a value",
+              "printable": true,
+              "items": [
+                "Production issue",
+                "Customer issue; legal; regulatory",
+                "Research and development; deformulation/benchmark"
+              ]
+            },
+            {
+              "type": "textBox",
+              "id": "customerIssue",
+              "parentId": "priorityGroup",
+              "textLocation": "top",
+              "caption": "What customer issue?",
+              "printable": true,
+              "watermark": "If \"customer issue\", please explain"
+            },
+            {
+              "type": "textBox",
+              "id": "customerIssueProduct",
+              "parentId": "priorityGroup",
+              "textLocation": "top",
+              "caption": "What Wacker product?",
+              "printable": true,
+              "watermark": "If \"customer issue\", please explain"
+            },
+            {
+              "type": "textBox",
+              "id": "deformulationComposition",
+              "parentId": "priorityGroup",
+              "textLocation": "top",
+              "caption": "What is known about the composition?",
+              "printable": true,
+              "watermark": "If \"deformulation\", please explain"
+            },
+            {
+              "type": "textBox",
+              "id": "deformulationCompositionConfirmation",
+              "parentId": "priorityGroup",
+              "textLocation": "top",
+              "caption": "What about the composition needs to be confirmed",
+              "printable": true,
+              "watermark": "If \"deformulation\", please explain"
+            },
+            {
+              "type": "textBox",
+              "id": "researchAndDevelopmentMaterialType",
+              "parentId": "priorityGroup",
+              "textLocation": "top",
+              "caption": "Is the material a reaction mixture, starting, intermediate, or finished material?",
+              "printable": true,
+              "watermark": "If \"research and development\", please explain"
+            }
+          ],
+          "position": {
+            "type": "tablePosition",
+            "rowIndex": 3,
+            "columnIndex": 0
+          }
+        },
+        {
+          "type": "regularLayout",
+          "id": "formOfOutputGroup",
+          "parentId": "mainGroup",
+          "showBorder": true,
+          "caption": "What form of output is needed for this request?",
+          "printable": true,
+          "controls": [
+            {
+              "type": "checkBoxDropdown",
+              "id": "formOfOutput",
+              "parentId": "formOfOutputGroup",
+              "caption": "Form of output",
+              "emptyText": "Please select ...",
+              "validate": true,
+              "errorText": "Please select a value",
+              "printable": true,
+              "items": [
+                "data only",
+                "data and email summary",
+                "report"
+              ]
+            }
+          ],
+          "position": {
+            "type": "tablePosition",
+            "rowIndex": 0,
+            "columnIndex": 1
+          }
+        },
+        {
+          "type": "regularLayout",
+          "id": "samplesTestedInOtherLabsGroup",
+          "parentId": "mainGroup",
+          "showBorder": true,
+          "caption": "Are the samples tested in any other analytical laboratory?",
+          "printable": true,
+          "controls": [
+            {
+              "type": "checkBoxDropdown",
+              "id": "samplesTestedInOtherLabs",
+              "parentId": "samplesTestedInOtherLabsGroup",
+              "caption": "If yes, which ones",
+              "emptyText": "Please select ...",
+              "printable": true,
+              "items": [
+                "Spectroscopy",
+                "Chromatography",
+                "Wet/Physical lab",
+                "Metals analysis",
+                "Other/outside"
+              ]
+            },
+            {
+              "type": "textBox",
+              "id": "otherSamplesTestedInOtherLabs",
+              "parentId": "samplesTestedInOtherLabsGroup",
+              "caption": "Other/outside",
+              "printable": true,
+              "watermark": "If \"other/outside\", please explain"
+            }
+          ],
+          "position": {
+            "type": "tablePosition",
+            "rowIndex": 1,
+            "columnIndex": 1
+          }
+        },
+        {
+          "type": "regularLayout",
+          "id": "sampleCompositionAndPurityGroup",
+          "parentId": "mainGroup",
+          "showBorder": true,
+          "printable": true,
+          "caption": "What is known about the sample composition? What is the anticipated purity?",
+          "controls": [
+            {
+              "type": "multiLineTextBox",
+              "id": "sampleCompositionAndPurity",
+              "printable": true,
+              "parentId": "sampleCompositionAndPurityGroup"
+            }
+          ],
+          "position": {
+            "type": "tablePosition",
+            "rowIndex": 2,
+            "columnIndex": 1
+          }
+        },
+        {
+          "type": "regularLayout",
+          "id": "reactionSchemeGroup",
+          "parentId": "mainGroup",
+          "showBorder": true,
+          "printable": true,
+          "caption": "Please provide a reaction scheme (not recipe), if known.",
+          "controls": [
+            {
+              "type": "multiLineTextBox",
+              "id": "reactionScheme",
+              "parentId": "reactionSchemeGroup"
+            }
+          ],
+          "position": {
+            "type": "tablePosition",
+            "rowIndex": 3,
+            "columnIndex": 1
+          }
+        }
+      ]
+    }
+  ]
+}

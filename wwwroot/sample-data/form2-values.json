@@ -1,0 +1,25 @@
+{
+  "primaryContact": "Test123",
+  "secondaryContact": "Hallo Welt",
+  "otherPurposeOfAnalysis": "",
+  "isMoreSampleAvailable": "True",
+  "solubilityInformation": "1234564784654",
+  "customerIssue": "",
+  "customerIssueProduct": "",
+  "deformulationComposition": "",
+  "deformulationCompositionConfirmation": "",
+  "researchAndDevelopmentMaterialType": "",
+  "otherSamplesTestedInOtherLabs": "",
+  "sampleCompositionAndPurity": "",
+  "reactionScheme": "",
+  "purposeOfAnalysis": [
+    "Identification",
+    "Comparison"
+  ],
+  "formOfOutput": [
+    "data only",
+    "data and email summary"
+  ],
+  "samplesTestedInOtherLabs": null,
+  "priority": "Research and development; deformulation/benchmark"
+}

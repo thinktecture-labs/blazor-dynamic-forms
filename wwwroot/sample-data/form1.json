@@ -1,0 +1,426 @@
+{
+  "type": "regularLayout",
+  "id": "root",
+  "showBorder": false,
+  "layoutType": "horizontal",
+  "controls": [
+    {
+      "type": "regularLayout",
+      "id": "mainGroup",
+      "parentId": "root",
+      "showBorder": false,
+      "controls": [
+        {
+          "type": "regularLayout",
+          "id": "orderInfoGroup",
+          "parentId": "mainGroup",
+          "showBorder": true,
+          "printable": true,
+          "caption": "@OrderInfo.Group.Caption",
+          "controls": [
+            {
+              "type": "datePicker",
+              "id": "orderDate",
+              "parentId": "orderInfoGroup",
+              "caption": "@OrderInfo.OrderDate.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@OrderInfo.OrderDate.ErrorText"
+            },
+            {
+              "type": "dropdown",
+              "id": "orderType",
+              "parentId": "orderInfoGroup",
+              "caption": "@OrderInfo.OrderType.Caption",
+              "emptyText": "@OrderInfo.OrderType.EmptyText",
+              "validate": true,
+              "printable": true,
+              "errorText": "@OrderInfo.OrderType.ErrorText",
+              "items": [
+                "@OrderInfo.OrderType.1.Name",
+                "@OrderInfo.OrderType.2.Name"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "id": "orderCategory",
+              "parentId": "orderInfoGroup",
+              "caption": "@OrderInfo.OrderCategory.Caption",
+              "emptyText": "@OrderInfo.OrderCategory.EmptyText",
+              "validate": true,
+              "printable": true,
+              "errorText": "@OrderInfo.OrderCategory.ErrorText",
+              "items": [
+                "@OrderInfo.OrderCategory.1.Name",
+                "@OrderInfo.OrderCategory.2.Name",
+                "@OrderInfo.OrderCategory.3.Name",
+                "@OrderInfo.OrderCategory.4.Name",
+                "@OrderInfo.OrderCategory.5.Name",
+                "@OrderInfo.OrderCategory.6.Name",
+                "@OrderInfo.OrderCategory.7.Name",
+                "@OrderInfo.OrderCategory.8.Name"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "id": "orderPriority",
+              "parentId": "orderInfoGroup",
+              "caption": "@OrderInfo.OrderPriority.Caption",
+              "emptyText": "@OrderInfo.OrderPriority.EmptyText",
+              "validate": true,
+              "printable": true,
+              "errorText": "@OrderInfo.OrderPriority.ErrorText",
+              "items": [
+                "@OrderInfo.OrderPriority.1.Name",
+                "@OrderInfo.OrderPriority.2.Name"
+              ]
+            },
+            {
+              "type": "textBox",
+              "id": "orderPriorityReason",
+              "parentId": "orderInfoGroup",
+              "caption": "@OrderInfo.OrderPriorityReason.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@OrderInfo.OrderPriorityReason.ErrorText"
+            }
+          ]
+        },
+        {
+          "type": "tableLayout",
+          "id": "tmlInfoGroup",
+          "parentId": "mainGroup",
+          "showBorder": true,
+          "printable": true,
+          "caption": "@TmlInfo.Group.Caption",
+          "columnDefinitions": [
+            {
+              "sizeType": "percent",
+              "width": 50
+            },
+            {
+              "sizeType": "percent",
+              "width": 50
+            }
+          ],
+          "rowDefinitions": [
+            {
+              "sizeType": "autosize"
+            },
+            {
+              "sizeType": "autosize"
+            },
+            {
+              "sizeType": "autosize"
+            },
+            {
+              "sizeType": "autosize"
+            },
+            {
+              "sizeType": "autosize"
+            },
+            {
+              "sizeType": "autosize"
+            },
+            {
+              "sizeType": "autosize"
+            },
+            {
+              "sizeType": "autosize"
+            },
+            {
+              "sizeType": "autosize"
+            },
+            {
+              "sizeType": "autosize"
+            },
+            {
+              "sizeType": "autosize"
+            },
+            {
+              "sizeType": "autosize"
+            },
+            {
+              "sizeType": "autosize"
+            },
+            {
+              "sizeType": "autosize"
+            }
+          ],
+          "controls": [
+            {
+              "type": "checkBox",
+              "id": "tml500",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML500.Caption",
+              "checkState": "unchecked",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 0,
+                "columnIndex": 0
+              }
+            },
+            {
+              "type": "checkBox",
+              "id": "tml501",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML501.Caption",
+              "checkState": "unchecked",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 1,
+                "columnIndex": 0
+              }
+            },
+            {
+              "type": "checkBox",
+              "id": "tml502",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML502.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 2,
+                "columnIndex": 0
+              }
+            },
+            {
+              "type": "checkBox",
+              "id": "tml503",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML503.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 3,
+                "columnIndex": 0
+              }
+            },
+            {
+              "type": "checkBox",
+              "id": "tml504",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML504.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 4,
+                "columnIndex": 0
+              }
+            },
+            {
+              "type": "checkBox",
+              "id": "tml505",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML505.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 5,
+                "columnIndex": 0
+              }
+            },
+            {
+              "type": "checkBox",
+              "id": "tml506",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML506.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 6,
+                "columnIndex": 0
+              }
+            },
+            {
+              "type": "checkBox",
+              "id": "tml507",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML507.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 7,
+                "columnIndex": 0
+              }
+            },
+            {
+              "type": "checkBox",
+              "id": "tml537HZF",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML537.HZF.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 8,
+                "columnIndex": 0
+              }
+            },
+            {
+              "type": "checkBox",
+              "id": "tml537BZDF",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML537.BZDF.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 9,
+                "columnIndex": 0
+              }
+            },
+            {
+              "type": "checkBox",
+              "id": "tml543",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML543.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 10,
+                "columnIndex": 0
+              }
+            },
+            {
+              "type": "textBox",
+              "id": "tml543Details",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML543.Details.Caption",
+              "printable": true,
+              "ignoreLayout": true,
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 10,
+                "columnIndex": 1
+              }
+            },
+            {
+              "type": "checkBox",
+              "id": "tml546",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML546.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 11,
+                "columnIndex": 0
+              }
+            },
+            {
+              "type": "checkBox",
+              "id": "tml553",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.TML553.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 12,
+                "columnIndex": 0
+              }
+            },
+            {
+              "type": "checkBox",
+              "id": "oeNormB6121",
+              "parentId": "tmlInfoGroup",
+              "caption": "@TmlInfo.OeNormB6121.Caption",
+              "validate": true,
+              "printable": true,
+              "errorText": "@TmlInfo.TML.ErrorText",
+              "position": {
+                "type": "tablePosition",
+                "rowIndex": 13,
+                "columnIndex": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "regularLayout",
+          "id": "sampleInfoGroup",
+          "parentId": "mainGroup",
+          "showBorder": true,
+          "printable": true,
+          "caption": "@SampleInfo.Group.Caption",
+          "controls": [
+            {
+              "type": "dropdown",
+              "id": "slabType1",
+              "parentId": "sampleInfoGroup",
+              "caption": "@SampleInfo.SlabType1.Caption",
+              "emptyText": "@SampleInfo.SlabType.EmptyText",
+              "validate": true,
+              "printable": true,
+              "errorText": "@SampleInfo.SlabType1.ErrorText",
+              "items": [
+                "@SampleInfo.SlabType.1.Name",
+                "@SampleInfo.SlabType.2.Name",
+                "@SampleInfo.SlabType.3.Name",
+                "@SampleInfo.SlabType.4.Name"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "id": "slabType2",
+              "parentId": "sampleInfoGroup",
+              "caption": "@SampleInfo.SlabType2.Caption",
+              "emptyText": "@SampleInfo.SlabType.EmptyText",
+              "printable": true,
+              "items": [
+                "@SampleInfo.SlabType.1.Name",
+                "@SampleInfo.SlabType.2.Name",
+                "@SampleInfo.SlabType.3.Name",
+                "@SampleInfo.SlabType.4.Name"
+              ]
+            },
+            {
+              "type": "textBox",
+              "id": "sampleStorage",
+              "parentId": "sampleInfoGroup",
+              "caption": "@SampleInfo.Storage.Caption",
+              "printable": true
+            },
+            {
+              "type": "dropdown",
+              "id": "bore",
+              "parentId": "sampleInfoGroup",
+              "caption": "@SampleInfo.Bore.Caption",
+              "emptyText": "@SampleInfo.Bore.EmptyText",
+              "printable": true,
+              "items": [
+                "@SampleInfo.Bore.1.Name",
+                "@SampleInfo.Bore.2.Name"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

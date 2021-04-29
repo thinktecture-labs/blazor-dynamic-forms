@@ -1,0 +1,13 @@
+@if (_root != null)
+{
+    <div class="booking-card">
+        <h1>Dynamic generated Form</h1>
+        <EditForm @ref="_form" Model="@model" OnSubmit="OnSubmit">
+            @CreateForm()
+            <div class="d-flex flex-row-reverse py-2 px-1">
+                <input type="submit" name="Absenden"/>
+                <input class="mr-4" type="reset" name="Zurücksetzen"/>
+            </div>
+        </EditForm>
+    </div>
+}

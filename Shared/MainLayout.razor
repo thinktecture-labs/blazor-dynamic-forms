@@ -1,0 +1,49 @@
+﻿@using Blazor.DynamicForms.Client.Shared.ResourceFiles
+@inherits LayoutComponentBase
+@inject IStringLocalizer<Resource> _localizer
+
+<MudThemeProvider Theme="_currentTheme"/>
+<MudDialogProvider FullWidth="true"
+                   MaxWidth="MaxWidth.Medium"
+                   CloseButton="true"
+                   DisableBackdropClick="true"
+                   Position="DialogPosition.Center"/>
+<MudSnackbarProvider/>
+
+<MudLayout>
+    <MudAppBar Elevation="1">
+        <MudText Typo="Typo.h5">Blazor @_localizer["Title"]</MudText>
+        <MudAppBarSpacer/>
+        <MudMenu StartIcon="@Icons.Filled.Translate" EndIcon="@Icons.Filled.KeyboardArrowDown" Color="Color.Inherit" Label="@Culture.DisplayName">
+            @foreach (var culture in cultures)
+            {
+                <MudMenuItem OnClick="@(() => Culture = culture)">@culture</MudMenuItem>
+            }
+        </MudMenu>
+        @if (_isDarkEnabled)
+        {
+            <MudIconButton Icon="@Icons.Filled.WbSunny" Color="Color.Inherit" OnClick="DarkMode"/>
+        }
+        else
+        {
+            <MudIconButton Icon="@Icons.Filled.BrightnessLow" Color="Color.Inherit" OnClick="DarkMode"/>
+        }
+    </MudAppBar>
+    <MudDrawer @bind-Open="@_open" Breakpoint="@breakpoint" Elevation="1" PreserveOpenState="@preserveOpenState">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h6">@_localizer["SubTitle"]</MudText>
+        </MudDrawerHeader>
+        <MudPaper Width="250px" Class="py-3" Square="true">
+            <MudNavMenu>
+                <MudNavLink Href="" Icon="@Icons.Filled.Dashboard">Bookings</MudNavLink>
+                <MudNavLink Href="/performance" Icon="@Icons.Filled.Storage">Performance</MudNavLink>
+                <MudNavLink Href="/about" Icon="@Icons.Filled.Info" IconColor="Color.Success">About</MudNavLink>
+            </MudNavMenu>
+        </MudPaper>
+    </MudDrawer>
+    <MudMainContent Class="pt-16 px-16">
+        <MudContainer Class="mt-6">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
